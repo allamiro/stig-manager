@@ -147,8 +147,35 @@ Configure NGINX for TLS and Reverse Proxy
 
 To deploy STIG Manager with TLS using NGINX as a reverse proxy, you will need to follow these essential steps based on the information you provided:
 
-1. Generate your CSR requests and get them signed by your Certificate Authority 
+1. Install nginx then generate your CSR requests and get them signed by your Certificate Authority 
 
+For RHEL 
+```
+dnf install openssl nginx -y
+
+
+```
+
+FOR UBUNTU
+
+```
+sudo apt update
+sudo apt install openssl nginx
+
+
+```
+
+
+
+
+
+```
+openssl genrsa -out mydomain.key 2048
+openssl req -new -key mydomain.key -out mydomain.csr
+
+
+
+```
 
 
 
