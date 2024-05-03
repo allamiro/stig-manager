@@ -182,7 +182,7 @@ server {
     }
 }
 
-
+```
 
 3. Enable and restart nginx service
 
