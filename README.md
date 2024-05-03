@@ -184,6 +184,28 @@ server {
 
 
 
+3. Enable and restart nginx service
+
+```
+systemctl enable nginx 
+systemctl start nginx 
+
+```
+
+
+
+
+
+4 . Access the site - https://your-site-domainname  happy STIGGING
+
+
+
+
+
+
+
+
+
 
 ```
 
