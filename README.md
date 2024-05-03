@@ -149,6 +149,31 @@ To deploy STIG Manager with TLS using NGINX as a reverse proxy, you will need to
 
 
 ```
+server {
+    listen 443 ssl;
+    server_name your-domain.com;
+
+    ssl_certificate /etc/nginx/ssl/your-domain.crt;  # SSL Certificate
+    ssl_certificate_key /etc/nginx/ssl/your-domain.key;  # SSL Certificate Key
+
+    # Adjusted location for the STIG Manager API ######
+    location /stig-api {
+        proxy_pass http://localhost:54000;  # Proxy traffic to the API service on port 54000
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Location for the STIG Manager main interface
+    location / {
+        proxy_pass http://localhost:8080;  # Proxy traffic to the main STIG Manager service on port 8080
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
 
 
 
