@@ -142,3 +142,16 @@ Verify that the containers are running successfully:
 docker-compose ps
 ```
 
+Configure NGINX for TLS and Reverse Proxy
+---
+
+To deploy STIG Manager with TLS using NGINX as a reverse proxy, you will need to follow these essential steps based on the information you provided:
+
+
+```
+
+
+
+
+```
+
