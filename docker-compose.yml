@@ -1,0 +1,30 @@
+services:
+  auth:
+    container_name:  stm-auth
+    image: nuwcdivnpt/stig-manager-auth
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+  db:
+    container_name: stm-db
+    image: mysql:8.0
+    ports:
+      - "50001:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpw
+      - MYSQL_USER=stigman
+      - MYSQL_PASSWORD=stigman
+      - MYSQL_DATABASE=stigman
+  api:
+    container_name: stm-api
+    image: nuwcdivnpt/stig-manager:latest
+    environment:
+      - STIGMAN_OIDC_PROVIDER=http://auth:8080/realms/stigman
+      - STIGMAN_CLASSIFICATION=U
+      - STIGMAN_DB_HOST=db
+      - STIGMAN_DB_PASSWORD=stigman
+      - STIGMAN_CLIENT_OIDC_PROVIDER=http://localhost:8080/realms/stigman
+      
+    init: true
+    ports:
+      - "54000:54000"
