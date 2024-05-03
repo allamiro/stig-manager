@@ -126,7 +126,7 @@ cd stig-manager
 
 
 #### Environment variables
-Update the environment variables .env file 
+Update the environment variables ```.env``` file 
 
 
 Start the services using Docker Compose:
