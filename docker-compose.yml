@@ -6,7 +6,8 @@ services:
     ports:
       - "8080:8080"
       - "8443:8443"
-
+    environment:
+      - PROXY_ADDRESS_FORWARDING=${PROXY_ADDRESS_FORWARDING}
   db:
     container_name: stm-db
     image: mysql:8.0
@@ -17,7 +18,6 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
-
   api:
     container_name: stm-api
     image: nuwcdivnpt/stig-manager:latest
@@ -30,3 +30,7 @@ services:
     init: true
     ports:
       - "54000:54000"
+
+
+
+      
