@@ -169,7 +169,7 @@ sudo apt install openssl nginx
 
 
 
-
+Generate the CSR Using the Private Key
 
 ```
 openssl genrsa -out mydomain.key 2048
