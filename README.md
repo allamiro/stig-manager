@@ -48,7 +48,7 @@ sudo apt install docker-ce
 
 ### For Windows and Mac:
 
-#### Download and install Docker Desktop from Docker Hub.
+Download and install Docker Desktop from Docker Hub.
 
 #### Installing Docker Compose
 
