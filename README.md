@@ -230,11 +230,6 @@ Reference
 ---
 1. https://stig-manager.readthedocs.io
 2. https://github.com/NUWCDIVNPT/stig-manager
-3. 
 
 
-
-
-
-```
 
