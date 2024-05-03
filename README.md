@@ -128,11 +128,7 @@ cd stig-manager
 #### Environment variables
 Update the environment variables .env file 
 
-```
-DB_USER=admin
-DB_PASS=password
 
-```
 Start the services using Docker Compose:
 
 ```
