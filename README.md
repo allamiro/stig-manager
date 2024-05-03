@@ -64,7 +64,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-
 ```
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-#### Setting Up STIG Manager
+### Setting Up STIG Manager
 
 #### Clone the repository containing your Docker Compose file:
 
@@ -74,4 +74,24 @@ git clone https://github.com/allamiro/stig-manager.git
 cd stig-manager
 ```
 
+
+
+#### Environment variables
+Update the environment variables .env file 
+
+```
+DB_USER=admin
+DB_PASS=password
+
+```
+Start the services using Docker Compose:
+
+```
+docker-compose up -d
+```
+Verify that the containers are running successfully:
+
+```
+docker-compose ps
+```
 
