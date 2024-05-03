@@ -64,6 +64,53 @@ sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-
 ```
 sudo chmod +x /usr/local/bin/docker-compose
 ```
+
+
+
+
+### For RHEL:
+
+#### Uninstall old versions of Docker, if any:
+
+```
+
+sudo yum remove docker docker-common docker-selinux docker-engine
+
+```
+
+#### Install required packages for setting up the repository:
+
+```
+
+sudo yum install -y yum-utils
+```
+Set up the stable repository:
+
+```
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
+#### Install the Docker package:
+
+```
+
+sudo yum install docker-ce
+```
+
+#### Start Docker:
+
+```
+
+sudo systemctl start docker
+```
+
+#### Enable Docker to start at boot:
+
+```
+
+sudo systemctl enable docker
+```
+
 ### Setting Up STIG Manager
 
 #### Clone the repository containing your Docker Compose file:
