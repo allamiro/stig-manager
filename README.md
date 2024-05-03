@@ -1,6 +1,6 @@
 STIG MANAGER
 ---
-This guide provides instructions on how to set up STIG Manager using Docker and Docker Compose.
+This guide provides instructions on how to set up STIG Manager using Docker and Docker Compose and utilizing nginx proxy.
 Prerequisites
 
 
