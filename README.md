@@ -230,6 +230,9 @@ Reference
 ---
 1. https://stig-manager.readthedocs.io
 2. https://github.com/NUWCDIVNPT/stig-manager
+3. https://github.com/NUWCDIVNPT/stigman-orchestration/blob/main/docker-compose.yml
+4. https://github.com/NUWCDIVNPT/stigman-orchestration
+5. https://github.com/NUWCDIVNPT/stig-manager/issues/1001
 
 
 
