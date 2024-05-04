@@ -176,6 +176,22 @@ openssl req -new -key mydomain.key -out mydomain.csr
 ```
 
 
+To create a self signed certificate without a prompt 
+
+
+```
+openssl req -newkey rsa:4096 \
+            -x509 \
+            -sha256 \
+            -days 3650 \
+            -nodes \
+            -out example.crt \
+            -keyout example.key \
+            -subj "/C=SUST/ST=VA/L=Sterling/O=Security/OU=IT Department/CN=www.example.com"
+
+```
+
+
 
 2. Create you configuration file at ``` /etc/nginx/conf.d/site-domain.conf ``` as follows:
 
