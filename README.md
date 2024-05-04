@@ -180,14 +180,8 @@ To create a self signed certificate without a prompt
 
 
 ```
-openssl req -newkey rsa:2048 \
-            -x509 \
-            -sha256 \
-            -days 3650 \
-            -nodes \
-            -out example.crt \
-            -keyout example.key \
-            -subj "/C=SUST/ST=VA/L=Sterling/O=Security/OU=IT Department/CN=www.example.com"
+openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr
+openssl x509 -signkey domain.key -in domain.csr -req -days 365 -out domain.crt
 
 ```
 
