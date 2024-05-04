@@ -219,7 +219,31 @@ server {
 
 ```
 
-3. Enable and restart nginx service
+
+
+3. Update firewalld
+
+
+```
+firewall-cmd --add-service=https --permanent
+firewall-cmd --reload
+```
+
+
+
+
+4. Update Selinux rules 
+
+```
+setsebool -P httpd_can_network_relay 1
+
+```
+
+
+
+
+
+5. Enable and restart nginx service
 
 ```
 systemctl enable nginx 
@@ -231,7 +255,9 @@ systemctl start nginx
 
 
 
-4 . Access the site - https://your-site-domainname  happy STIGGING
+
+
+6. Access the site - https://your-site-domainname  happy STIGGING
 
 
 
