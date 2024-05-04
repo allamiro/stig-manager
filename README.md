@@ -180,7 +180,7 @@ To create a self signed certificate without a prompt
 
 
 ```
-openssl req -newkey rsa:4096 \
+openssl req -newkey rsa:2048 \
             -x509 \
             -sha256 \
             -days 3650 \
