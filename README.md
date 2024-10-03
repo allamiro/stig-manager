@@ -199,7 +199,7 @@ server {
     ssl_certificate_key /etc/nginx/ssl/your-domain.key;  # SSL Certificate Key
 
     # Adjusted location for the STIG Manager API ######
-    location /stig-api {
+    location / {
         proxy_pass http://localhost:54000;  # Proxy traffic to the API service on port 54000
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
